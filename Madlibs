@@ -1,0 +1,36 @@
+# woo lets create this game
+
+# we are gonaa use docstrin
+
+story="""   
+Once upon a time, There was a {personanimal},it was very dangerous it kills people {adjective}
+without even a hint of remorse.One day it was roaming in a {place}.When it suddenly saw a {personanimons}
+wandering it suddenly desire to get the {bodypart} of that thing,It grab its {weapon},and sneakily 
+chase that person and when it gonna attack it the person throw {fluid}filled with deadly poison
+and the person get {disease} and died,the END"""
+
+def get_word(prompt):
+      return input(prompt)
+
+personanimal=(get_word("Enter any person or animal name"))
+adjective=(get_word("Enter any kind of adjective"))
+place=(get_word("Enter any place on the earth"))
+personanimons=(get_word("Enter any person or animal name"))
+bodypart=(get_word("ENter ny body part"))
+weapon=(get_word("Enter any kind of weapon"))
+fluid=(get_word("Any kind of liquid"))
+disease=(get_word("Enter any disease"))
+
+story_filled=story.format(
+      personanimal=personanimal,
+      adjective=adjective,
+      place=place,
+      personanimons=personanimons,
+      bodypart=bodypart,
+      weapon=weapon,
+      fluid=fluid,
+      disease=disease
+)
+
+print("My story mad libs")
+print(story_filled)
