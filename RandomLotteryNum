@@ -1,0 +1,33 @@
+import random
+
+def numbers():
+    num=int(input("Enter your number if your number matches the computer u win the lottery\n"))
+    ran_num=random.randint(1,100)
+    print(f"The number computer choose is {ran_num}")
+    return num,ran_num
+
+
+def guess(num,ran_num):
+    if ran_num==num:
+        print("congrats u won the lottery of 5000$")
+    else:
+        print("i am sorry ur choice of numbers is unlucky u suck")
+
+
+def again():
+    while True:
+        ask=(input("\nDo you again want to loose?")).strip().lower()
+
+        if ask=="yes":
+            numbers()
+        elif ask=="No":
+            print("hahaha you're scared")
+        else:
+            print("Go home and cry ")
+            break
+
+num,ran_num=numbers()
+guess(num,ran_num)
+again()
+
+    
