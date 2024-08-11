@@ -1,0 +1,48 @@
+# ----------less go for the Dice roll
+
+import random
+
+user_score=0
+computer_score=0
+
+def computer():
+    global user_score, computer_score
+    user=(input("Enter what u want rock/paper/scissor\n"))
+# rnadint is used to select from integers for strings we will use choice
+    compe=("rock","scissor","paper")
+    choose=random.choice(compe)
+    print(f"the computer choose {choose}")
+    
+
+
+    if user ==choose:
+        print("its a tie")
+    elif ( user == "rock" and choose == "scissor" ) or \
+    (user == "scissor" and choose == "paper") or \
+    (user == "rock" and choose == "paper"):
+        print("u won")
+        user_score+=1
+    else:
+        print("You loose")
+        computer_score+=1
+    
+    
+
+
+def again():
+    while True:
+        ask=(input("u want to loose?again????\n")).strip().lower()
+    
+        if ask=="yes":
+            computer()
+        elif ask=="no":
+            print(f"the user score is {user_score} , and computer score is {computer_score}")
+
+        else:
+            print("mission accomplished")
+            break
+
+computer()
+again()
+
+    
